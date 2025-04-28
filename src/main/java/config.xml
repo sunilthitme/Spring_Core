@@ -22,6 +22,19 @@
          <property name="address">
          <value>Pune</value>
          </property>
+         
+         <!-- adding reference object -->
+         
+         <property name="comp">
+         <ref bean="compRef"/>
+         </property>
          </bean>
-
+         
+         <bean class="com.springCore.Company " name="compRef">
+         <property name="name">
+         <value>TCS</value>
+         </property>
+         
+         </bean>
+		
 </beans>

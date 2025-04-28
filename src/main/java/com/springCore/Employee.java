@@ -4,16 +4,28 @@ public class Employee {
 	private int id;
 	private String name;
 	private String address;
+	private Company comp;
+
+
+	public Company getComp() {
+		return comp;
+	}
+
+	public void setComp(Company comp) {
+		this.comp = comp;
+	}
 
 	public Employee() {
 		super();
 	}
 
-	public Employee(int id, String name, String address) {
+	public Employee(int id, String name, String address,Company comp) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.address = address;
+		this.comp = comp;
+
 	}
 
 	public int getId() {
@@ -42,7 +54,7 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", address=" + address + "]";
+		return "Employee [id=" + id + ", name=" + name + ", address=" + address +", comp=" +comp+"]";
 	}
 
 }
