@@ -1,40 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:p="http://www.springframework.org/schema/p"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
            http://www.springframework.org/schema/beans/spring-beans.xsd
            http://www.springframework.org/schema/context 
            http://www.springframework.org/schema/context/spring-context.xsd">
-           
-         <!-- Setter Injection -->
-         <!-- This object creation and setter injection are work at Runtime which is dynamically -->
-         <bean class="com.springCore.Employee " name=" employee">
-         <property name="id">
-         <value>1</value>
-         </property>
-         
-         <property name="name">
-         <value>sunil</value>
-         </property>
-         
-         <property name="address">
-         <value>Pune</value>
-         </property>
-         
-         <!-- adding reference object -->
-         
-         <property name="comp">
-         <ref bean="compRef"/>
-         </property>
-         </bean>
-         
-         <bean class="com.springCore.Company " name="compRef">
-         <property name="name">
-         <value>TCS</value>
-         </property>
-         
-         </bean>
-		
+
+	<!-- Setter Injection -->
+	
+	<!-- This object creation and setter injection are work at Runtime which 
+		is dynamically -->
+	   <bean class="com.springCore.Employee " name=" employee">
+		<constructor-arg value="1"/>
+		<constructor-arg value="sunil"/>
+		<constructor-arg value="pune"/>
+		<constructor-arg ref="comp"/>
+      </bean> 
+      <bean class="com.springCore.Company" name="comp">
+		<constructor-arg value="TCS"/>
+      </bean>          
 </beans>
