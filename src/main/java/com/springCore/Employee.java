@@ -51,7 +51,12 @@ public class Employee {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
+	public void init() {
+		System.out.println("Inside init method");
+	}
+	public void destroy() {
+		System.out.println("Inside destroy method ");
+	}
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", address=" + address +", comp=" +comp+"]";
