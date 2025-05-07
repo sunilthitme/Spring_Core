@@ -12,14 +12,11 @@ public class SpringApp {
 		AbstractApplicationContext context=new ClassPathXmlApplicationContext("config.xml");
 		Employee emp=(Employee)context.getBean("employee");
 		
-		System.out.println(emp);
-		context.registerShutdownHook();
-		
-		Company comp=(Company)context.getBean("comp");
+		Company comp=context.getBean("comp",Company.class);
 		System.out.println(comp);
 		
-		Project proj=(Project) context.getBean("project");
-		System.out.println(proj);
+//		Project proj=(Project) context.getBean("project");
+//		System.out.println(proj);
 		
 	}
 }
