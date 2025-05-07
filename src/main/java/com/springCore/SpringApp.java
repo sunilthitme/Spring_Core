@@ -9,14 +9,8 @@ public class SpringApp {
 	public static void main(String[] args) {
 		System.out.println("Hello World");
 		
-		AbstractApplicationContext context=new ClassPathXmlApplicationContext("config.xml");
-		Employee emp=(Employee)context.getBean("employee");
-		
-		Company comp=context.getBean("comp",Company.class);
-		System.out.println(comp);
-		
-//		Project proj=(Project) context.getBean("project");
-//		System.out.println(proj);
-		
+		ApplicationContext context=new ClassPathXmlApplicationContext("config.xml");
+		Employee e=context.getBean("employee",Employee.class);
+		System.out.println(e);
 	}
 }

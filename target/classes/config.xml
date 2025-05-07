@@ -9,28 +9,7 @@
            http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<context:annotation-config />
-	<bean class="com.springCore.Employee " name=" employee1"
-		init-method="init" destroy-method="destroy">
-		<constructor-arg value="1" />
-		<constructor-arg value="sunil" />
-		<constructor-arg value="pune" />
-		<constructor-arg ref="comp" />
-	</bean>
-	<bean class="com.springCore.Employee " name=" employee2"
-		init-method="init" destroy-method="destroy">
-		<constructor-arg value="1" />
-		<constructor-arg value="sunil" />
-		<constructor-arg value="pune" />
-		<constructor-arg ref="comp" />
-	</bean>
-
-	<!-- XML Based Autowiring -->
-	<bean class="com.springCore.Company" name="comp" autowire="byName">
-		<constructor-arg value="TCS" />
-	</bean>
-
-	<!-- <bean class="com.springCore.Project" name="project"> <constructor-arg 
-		value="JAP" /> </bean> -->
+	<context:component-scan base-package="com.springCore" />
 
 
 </beans>
