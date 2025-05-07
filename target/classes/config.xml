@@ -9,7 +9,14 @@
            http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<context:annotation-config />
-	<bean class="com.springCore.Employee " name=" employee"
+	<bean class="com.springCore.Employee " name=" employee1"
+		init-method="init" destroy-method="destroy">
+		<constructor-arg value="1" />
+		<constructor-arg value="sunil" />
+		<constructor-arg value="pune" />
+		<constructor-arg ref="comp" />
+	</bean>
+	<bean class="com.springCore.Employee " name=" employee2"
 		init-method="init" destroy-method="destroy">
 		<constructor-arg value="1" />
 		<constructor-arg value="sunil" />

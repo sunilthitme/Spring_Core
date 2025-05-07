@@ -4,10 +4,12 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Project {
-//	Autowired using annotation by property, setter and constructor
 	@Autowired
+	@Qualifier("employee2")
+	//we can call specific bean by using Qualifier Annotation
 	private String name;
 
 	public Project(String name) {
