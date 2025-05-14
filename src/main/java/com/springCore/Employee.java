@@ -4,10 +4,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
-@Scope("prototype")
-//The protoype annotation help to always return a new object
+@Component("employee")
 public class Employee {
+	
 	@Value("1")
 	private int id;
 	@Value("sunil")
