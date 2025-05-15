@@ -13,28 +13,28 @@ public class Employee {
 	private String name;
 	@Value("pune")
 	private String address;
-	@Value("TCS")
-	private Company comp;
+//	@Value("TCS")
+//	private Company comp;
 
 
-	public Company getComp() {
-		return comp;
-	}
+//	public Company getComp() {
+//		return comp;
+//	}
 
-	public void setComp(Company comp) {
-		this.comp = comp;
-	}
+//	public void setComp(Company comp) {
+//		this.comp = comp;
+//	}
 
 	public Employee() {
 		super();
 	}
 
-	public Employee(int id, String name, String address,Company comp) {
+	public Employee(int id, String name, String address) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.address = address;
-		this.comp = comp;
+//		this.comp = comp;
 
 	}
 
@@ -69,7 +69,7 @@ public class Employee {
 	}
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", address=" + address +", comp=" +comp+"]";
+		return "Employee [id=" + id + ", name=" + name + ", address=" + address +"]";
 	}
 
 }
